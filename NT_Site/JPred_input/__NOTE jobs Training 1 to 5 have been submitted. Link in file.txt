@@ -1,0 +1,3 @@
+__NOTE jobs Training 1 to 5 have been submitted. Link in file.txt
+
+http://www.compbio.dundee.ac.uk/jpred4/index_up.html

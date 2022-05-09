@@ -1,0 +1,73 @@
+##########################################################################################################################################################
+Kmer Frequency Mapping
+##########################################################################################################################################################
+
+python MathFeature-master/methods/Mappings-Protein.py -n 1 -o PredNTS_MathFeature_ENC\\Training-datasets-PredNTS_1mer-frequency-Mapping.csv -r 3
+PredNTS_Data_fasta\\Training-datasets-PredNTS.fasta
+train
+1
+
+python MathFeature-master/methods/Mappings-Protein.py -n 1 -o PredNTS_MathFeature_ENC\\Training-datasets-PredNTS_2mer-frequency-Mapping.csv -r 3
+PredNTS_Data_fasta\\Training-datasets-PredNTS.fasta
+train
+2
+
+python MathFeature-master/methods/Mappings-Protein.py -n 1 -o PredNTS_MathFeature_ENC\\Training-datasets-PredNTS_3mer-frequency-Mapping.csv -r 3
+PredNTS_Data_fasta\\Training-datasets-PredNTS.fasta
+train
+3
+
+python MathFeature-master/methods/Mappings-Protein.py -n 1 -o PredNTS_MathFeature_ENC\\independent-dataset-PredNTS_1mer-frequency-Mapping.csv -r 3
+PredNTS_Data_fasta\\independent-dataset-PredNTS.fasta
+independent
+1
+
+python MathFeature-master/methods/Mappings-Protein.py -n 1 -o PredNTS_MathFeature_ENC\\independent-dataset-PredNTS_2mer-frequency-Mapping.csv -r 3
+PredNTS_Data_fasta\\independent-dataset-PredNTS.fasta
+independent
+2
+
+python MathFeature-master/methods/Mappings-Protein.py -n 1 -o PredNTS_MathFeature_ENC\\independent-dataset-PredNTS_3mer-frequency-Mapping.csv -r 3
+PredNTS_Data_fasta\\independent-dataset-PredNTS.fasta
+independent
+3
+
+
+
+##########################################################################################################################################################
+Kmer Encoding
+##########################################################################################################################################################
+
+python MathFeature-master/methods/ExtractionTechniques-Protein.py -i PredNTS_Data_fasta\\Training-datasets-PredNTS.fasta -o PredNTS_MathFeature_ENC\\Training-datasets-PredNTS_kmer.csv -l train -t kmer
+3
+
+python MathFeature-master/methods/ExtractionTechniques-Protein.py -i PredNTS_Data_fasta\\independent-dataset-PredNTS.fasta -o PredNTS_MathFeature_ENC\\independent-dataset-PredNTS_kmer.csv -l independent -t kmer
+3
+
+
+
+##########################################################################################################################################################
+Xmer k-Spaced Ymer Composition Frequency (kGap)
+##########################################################################################################################################################
+
+python MathFeature-master/methods/Kgap.py -i PredNTS_Data_fasta\\Training-datasets-PredNTS.fasta -o PredNTS_MathFeature_ENC\\Training-datasets-PredNTS_kgap_0.csv -l train -k 0 -bef 1 -aft 1 -seq 3
+
+python MathFeature-master/methods/Kgap.py -i PredNTS_Data_fasta\\Training-datasets-PredNTS.fasta -o PredNTS_MathFeature_ENC\\Training-datasets-PredNTS_kgap_1.csv -l train -k 1 -bef 1 -aft 1 -seq 3
+
+python MathFeature-master/methods/Kgap.py -i PredNTS_Data_fasta\\Training-datasets-PredNTS.fasta -o PredNTS_MathFeature_ENC\\Training-datasets-PredNTS_kgap_2.csv -l train -k 2 -bef 1 -aft 1 -seq 3
+
+python MathFeature-master/methods/Kgap.py -i PredNTS_Data_fasta\\Training-datasets-PredNTS.fasta -o PredNTS_MathFeature_ENC\\Training-datasets-PredNTS_kgap_3.csv -l train -k 3 -bef 1 -aft 1 -seq 3
+
+python MathFeature-master/methods/Kgap.py -i PredNTS_Data_fasta\\Training-datasets-PredNTS.fasta -o PredNTS_MathFeature_ENC\\Training-datasets-PredNTS_kgap_4.csv -l train -k 4 -bef 1 -aft 1 -seq 3
+
+python MathFeature-master/methods/Kgap.py -i PredNTS_Data_fasta\\independent-dataset-PredNTS.fasta -o PredNTS_MathFeature_ENC\\independent-dataset-PredNTS_kgap_0.csv -l independent -k 0 -bef 1 -aft 1 -seq 3
+
+python MathFeature-master/methods/Kgap.py -i PredNTS_Data_fasta\\independent-dataset-PredNTS.fasta -o PredNTS_MathFeature_ENC\\independent-dataset-PredNTS_kgap_1.csv -l independent -k 1 -bef 1 -aft 1 -seq 3
+
+python MathFeature-master/methods/Kgap.py -i PredNTS_Data_fasta\\independent-dataset-PredNTS.fasta -o PredNTS_MathFeature_ENC\\independent-dataset-PredNTS_kgap_2.csv -l independent -k 2 -bef 1 -aft 1 -seq 3
+
+python MathFeature-master/methods/Kgap.py -i PredNTS_Data_fasta\\independent-dataset-PredNTS.fasta -o PredNTS_MathFeature_ENC\\independent-dataset-PredNTS_kgap_3.csv -l independent -k 3 -bef 1 -aft 1 -seq 3
+
+python MathFeature-master/methods/Kgap.py -i PredNTS_Data_fasta\\independent-dataset-PredNTS.fasta -o PredNTS_MathFeature_ENC\\independent-dataset-PredNTS_kgap_4.csv -l independent -k 4 -bef 1 -aft 1 -seq 3
+
+
