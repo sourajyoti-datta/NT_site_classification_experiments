@@ -71,3 +71,13 @@ python MathFeature-master/methods/Kgap.py -i PredNTS_Data_fasta\\independent-dat
 python MathFeature-master/methods/Kgap.py -i PredNTS_Data_fasta\\independent-dataset-PredNTS.fasta -o PredNTS_MathFeature_ENC\\independent-dataset-PredNTS_kgap_4.csv -l independent -k 4 -bef 1 -aft 1 -seq 3
 
 
+
+##########################################################################################################################################################
+Kmer Encoding for iNitroY
+##########################################################################################################################################################
+
+python MathFeature-master/methods/ExtractionTechniques-Protein.py -i iNitroY_data_fasta\\cdhit70-nitrotyr-neg.fasta -o iNitroY_MathFeature_ENC\\cdhit70-nitrotyr-neg_Kmer.csv -l negative -t kmer
+3
+
+python MathFeature-master/methods/ExtractionTechniques-Protein.py -i iNitroY_data_fasta\\raw-nitrotyrosine-pos.fasta -o iNitroY_MathFeature_ENC\\raw-nitrotyrosine-pos_Kmer.csv -l positive -t kmer
+3
